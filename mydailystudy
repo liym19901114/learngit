@@ -1,3 +1,8 @@
 2016/10/27
 1.window是抽象类，具体实现类为PhoneWindow，通过WindowManager创建，WindowManager与WindowManagerService交互是典型IPC通信。window是androd手机最外层的视图，View事件分发：window-->DecorView-->自定义View.
 2.activity的window创建：ActivityThread中performLaunchActivity()调用activity的attch方法，该方法创建window并且与之关联，activity的setContentView调用PhoneWindow的setContentView,此方法中初始化DecorView将Activity展示的View添加到DecoreView的名字为R.id.content的ViewGroup中，所以叫setContentView.
+
+
+2016/10/31
+3.开闭原则：对扩展开放，对修改原有代码关闭。
+4.Bind java层：各类service继承自Binder类，Bind类构造函数中将mObject变量赋值为JavaBBinderHolder对象指针，JavaBBinderHolder对象中可获取JavaBBinder对象指针，JavaBBinder对应的native层的BBinder从而与native层形成映射关系。
