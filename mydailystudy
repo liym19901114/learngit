@@ -12,3 +12,8 @@
 5.Dalvik虚拟机特点：i）基于寄存器，可针对特定硬件最大化优化代码。ii）运行的是经过优化和压缩的DEX字节码，可比jar字节码节省几乎一半空间，提高I/O读取速度，而且可进一步优化为ODEX字节码。iii）进程安全和隔离，每个应用运行在独立DVM实例中，有自己独立的进程空间。DVM’依赖于Linux线程调度和管理机制，通过fork函数为每个应用创建一个Linux进程，与上层应用一一对应，独立的进程空间可以防止DVM崩溃时所有程序被杀死。
 6.Android对Linux裁剪和优化集中在：i）弃用标准Linux的GUI系统。ii）采用更有效率的Bionic Libc库代替glibc库（底层的C运行库）。iii）增加Gold－Fish平台（虚拟的ARM处理器）。iiii）专有的驱动程序：Binder，Logger，PowerManager等。
 7.应用层可视做四大组件。
+
+
+2016/11/07
+8.pwd 查看当前目录。
+9.
