@@ -1,4 +1,4 @@
-2016/10/27
+﻿2016/10/27
 1.window是抽象类，具体实现类为PhoneWindow，通过WindowManager创建，WindowManager与WindowManagerService交互是典型IPC通信。window是androd手机最外层的视图，View事件分发：window-->DecorView-->自定义View.
 2.activity的window创建：ActivityThread中performLaunchActivity()调用activity的attch方法，该方法创建window并且与之关联，activity的setContentView调用PhoneWindow的setContentView,此方法中初始化DecorView将Activity展示的View添加到DecoreView的名字为R.id.content的ViewGroup中，所以叫setContentView.
 
@@ -17,3 +17,6 @@
 2016/11/07
 8.pwd 查看当前目录。
 9.git remote主要功能是管理远程主机 即远程仓库。
+
+2016/12/05
+canvas画布，媒介是bitmap
